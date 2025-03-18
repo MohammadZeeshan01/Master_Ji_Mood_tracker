@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood querySelector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <h1>Daily Mood Tracker</h1>
+            <p>Monitor your Daily Mood</p>
+            <div class="Mood-card">
+                <h2>How are you feeling today?</h2>
+                <div class="mood-selector">
+                    <button class="mood-btn" data-mood="😀" title="Happy">😀</button>
+                    <button class="mood-btn" data-mood="😐" title="Neutral">😐</button>
+                    <button class="mood-btn" data-mood="🙁" title="Sad">🙁</button>
+                    <button class="mood-btn" data-mood="😢" title="Very Sad">😢</button>
+                    <button class="mood-btn" data-mood="😡" title="Angry">😡</button>
+                    <button class="mood-btn" data-mood="😴" title="Tired">😴</button>
+                    <button class="mood-btn" data-mood="🤩" title="Excited">🤩</button>
+                    <!-- <button class="mood-btn"  title="Excited">🤩</button> -->
+                </div>
+                <!-- <p id="output"></p> -->
+            </div>
+        </div>
+        <div class="historyContainer">
+            <div class="historyMood">
+                <span>your Selected mood</span>
+                <p id="output"></p>
+            </div>
+            <button class="save-btn" id="save-mood">Save Today's Mood</button>
+
+
+            <div class="view-controls">
+                <button id="daily" class="view-btn active">Daily</button>
+                <button id="week" class="view-btn">Weekly</button>
+                <button id="month" class="view-btn">Monthly</button>
+            </div>
+
+            <!-- Container for displaying mood data -->
+            <div id="mood-display-container">
+                <!-- Daily view -->
+                <div id="daily-view" class="view-content active">
+                    <h3>Daily Mood History</h3>
+                    <div id="daily-moods" class="mood-list"></div>
+                </div>
+
+                <!-- Weekly view -->
+                <div id="weekly-view" class="view-content">
+                    <h3>Weekly Mood Summary</h3>
+                    <div id="weekly-moods" class="mood-list"></div>
+                </div>
+
+                <!-- Monthly view -->
+                <div id="monthly-view" class="view-content">
+                    <h3>Monthly Mood Calendar</h3>
+                    <div id="calendar-container">
+                        <div id="calendar-header">
+                            <button id="prev-month">&lt;</button>
+                            <h4 id="current-month-display">March 2024</h4>
+                            <button id="next-month">&gt;</button>
+                        </div>
+                        <div id="calendar-weekdays">
+                            <div>Sun</div>
+                            <div>Mon</div>
+                            <div>Tue</div>
+                            <div>Wed</div>
+                            <div>Thu</div>
+                            <div>Fri</div>
+                            <div>Sat</div>
+                        </div>
+                        <div id="calendar-days"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </center>
+    <script src="./index.js"></script>
+</body>
+
+</html>
